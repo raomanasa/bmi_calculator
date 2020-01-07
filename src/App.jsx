@@ -11,7 +11,7 @@ class App extends Component {
     onChangeHandler = e => this.state({ [e.target.name]: e.target.value});
     onSubmitHandler = e => {
       e.preventDefault();
-      const [bmiValue , bmiMessage] = calculate bmi (
+      const [bmiValue , bmiMessage] = calculateBmi(
         this.state.weight,
         this.state.height
       );

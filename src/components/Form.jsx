@@ -1,8 +1,8 @@
 import React from "react"
 const Form =Props => {
     return(
-        <form>
-            <lable htmlFor="weight">Weight</lable>
+    <form onSubmit={props.onSubmitHandler}>
+        <lable htmlFor="weight">Weight</lable>
             <input
             type="number"
             required
