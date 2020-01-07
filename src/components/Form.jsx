@@ -9,6 +9,7 @@ const Form =Props => {
             placeholder="Weight in kgs"
             name="weight"
             id="weight"
+            onChange={props.onChangeHandler}
             />
             <lable htmlFor="height">Height</lable>
             <input
@@ -17,6 +18,7 @@ const Form =Props => {
             placehlder="Height in cm"
             name="height"
             id="height"
+            onChange={props.onChangeHandler}
             />
             <button>Calculate BMI</button>
         </form>
