@@ -1,9 +1,22 @@
 import React,{ Component} from "react";
 import Form from ",/components/Form";
 class App extends Component {
-  render(){
-    return  <Form />  
+  state = {
+    weight:"",
+    height:""
+  };
+    onChangeHandler = e => this.state({ [e.target.name]: e.target.value});
+    render() {
+      return(
+        <div>
+          <Form
+          weight = {this.state.weight}
+          height = {this.state.height}
+          onChangeHandler={this.onChangeHandler}
+          />
+        </div>
+      );
+    }
   }
-}
-
 export default App;
+
