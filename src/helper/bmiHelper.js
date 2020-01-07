@@ -1,10 +1,13 @@
 export const calculateBmi = (weight,height) => {
-    const bmiValue = (weight /((height/100)* height)/100).toFixed(2);
-    const bmiMessage = setBMIMessage(bmivalue);
-    return [bmiValue, bmiMessage];
+    const bmiValue = ((weight /(height* height))*10000).toFixed(2);
+    const bmiMessage = setBMIMessage(bmiValue);
+    const bmiImperial = (703 * weight / [(height *height)]).toFixed(2);
+    const bmiImpMessage=setBMIMessage(bmiImperial);
+    return [bmiValue, bmiMessage,bmiImperial,bmiImpMessage];
 };
 
-const setBMIMessage = fianlBMI => {
+
+const setBMIMessage = finalBMI => {
     if(finalBMI < 18.5) {
         return "Underweight";
     }
@@ -14,7 +17,7 @@ const setBMIMessage = fianlBMI => {
     if(finalBMI >25 && finalBMI <30){
     return "Overweight";
     }
-    if (fianlBMI >30){
+    if(finalBMI >30){
         return "Obese"
     }
 };
